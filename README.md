@@ -1,4 +1,4 @@
-# PRODIGY_WD_02 - Interactive Stopwatch Web Application ⏱️
+# Interactive Stopwatch Web Application ⏱️
 
 Welcome to **PRODIGY_WD_02**, a dynamic and interactive stopwatch web application designed for precise time management and user-friendly interaction. This project is built using HTML, CSS, and JavaScript, offering a seamless experience for users who need to track time with accuracy and simplicity.
 
