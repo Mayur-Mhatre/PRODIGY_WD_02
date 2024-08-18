@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.container {
+    background-color: #000;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: #fff;
+}
+
+.title {
+    font-size: 1.5em;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 25px 25px 0 0;
+}
+
+.circle {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.display {
+    font-size: 2em;
+    position: relative;
+}
+
+.lap-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lap-btn:hover {
+    background-color: #ddd;
+}
+
+.laps {
+    max-height: 100px;
+    overflow-y: auto;
+    color: #ddd;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.laps ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.laps ul li {
+    padding: 5px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.control-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #ddd;
+    color: #000;
+}
