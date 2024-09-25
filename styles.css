@@ -74,13 +74,56 @@ body {
 }
 
 .laps ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: disc; /* Adds bullets to the list */
+    padding-left: 20px; /* Adjust spacing for bullets */
 }
 
 .laps ul li {
     padding: 5px 0;
+}
+
+/* Custom Scrollbar Styling */
+
+/* For Chrome, Edge, and Safari */
+.laps::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.laps::-webkit-scrollbar-thumb {
+    background-color: #ddd; /* Color of the slider (thumb) */
+    border-radius: 10px; /* Rounded edges for the slider */
+}
+
+.laps::-webkit-scrollbar-track {
+    background: transparent; /* Transparent background for the scrollbar track */
+}
+
+/* Hiding the scrollbar arrows explicitly */
+.laps::-webkit-scrollbar-button {
+    display: none; /* Hide the up/down arrows */
+    width: 0;
+    height: 0;
+}
+
+/* Additional WebKit fix for any possible scrollbar button displays */
+.laps::-webkit-scrollbar-button:vertical {
+    display: none; /* Remove any vertical arrows */
+}
+
+.laps::-webkit-scrollbar-button:increment,
+.laps::-webkit-scrollbar-button:decrement {
+    display: none !important; /* Forcefully ensure arrows are hidden */
+}
+
+/* For Firefox */
+.laps {
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: #ddd transparent; /* Color of the thumb and track */
+}
+
+/* Aggressive hiding for Firefox scrollbar buttons */
+.laps::-moz-scrollbar-button {
+    display: none !important; /* Hide any scrollbar buttons in Firefox */
 }
 
 .buttons {
