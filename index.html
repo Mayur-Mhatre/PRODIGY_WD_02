@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Stopwatch</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Stopwatch with Lap</title>
+    <link id="theme-link" rel="stylesheet" href="dark-theme.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="title">STOPWATCH</h1>
-        <div class="circle">
-            <div class="display">
-                <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
-            </div>
+        <div class="header">
+            <h1>STOPWATCH</h1>
         </div>
-        <button id="lap" class="btn lap-btn">LAP</button>
-        <div class="laps">
-            <ul id="laps"></ul>
+        <div class="stopwatch-display" id="stopwatch">00:00:00</div>
+        <button id="lap" class="lap-button">Lap</button>
+
+        <div class="controls">
+            <button id="start-pause" class="control-button">⏵</button>
+            <button id="reset" class="control-button">⏹</button>
         </div>
-        <div class="buttons">
-            <button id="start-pause" class="btn control-btn">⏵</button>
-            <button id="reset" class="btn control-btn">⏹</button>
-        </div>
+
+        <ul class="lap-list" id="laps"></ul>
+
+        <!-- Theme Toggle Switch -->
+        <label class="switch">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider"></span>
+        </label>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
