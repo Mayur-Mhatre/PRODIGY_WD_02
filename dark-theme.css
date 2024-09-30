@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    background-color: #000;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: #fff;
+}
+
+.header {
+    background-color: #ffffff; /* Container background behind the header */
+    padding: 10px;
+    border-radius: 15px;
+    margin: 0 auto 30px;
+}
+
+.header h1 {
+    font-size: 1.5rem; /* Increased header font size */
+    color: rgb(0, 0, 0);
+}
+
+.stopwatch-display {
+    font-size: 2.0rem; /* Increased font size */
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 180px; /* Increased size */
+    height: 180px; /* Increased size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 40px;
+    background-color: #000;
+}
+
+.lap-list {
+    max-height: 63px;
+    overflow-y: auto;
+    list-style: none; /* Remove default bullets */
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    display: none; /* Hidden initially */
+}
+
+.lap-list li {
+    position: relative; /* Position relative for pseudo-elements */
+    padding-left: 20px; /* Space for the bullet */
+}
+
+.lap-list li::before {
+    content: ''; /* Empty content for custom bullet */
+    position: absolute;
+    left: 0; /* Position on the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to center */
+    width: 10px; /* Bullet size */
+    height: 10px; /* Bullet size */
+    background-color: black; /* Bullet color */
+    border-radius: 50%; /* Make it round */
+}
+
+/* Custom Scrollbar for the Lap List */
+.lap-list::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+
+.lap-list::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.lap-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change color on hover */
+}
+
+.lap-list::-webkit-scrollbar-track {
+    background: transparent; /* Background for the scrollbar track */
+}
+
+.lap-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 20px;
+    margin: 20px auto;
+    cursor: pointer;
+    font-size: 18px; /* Increased button font size */
+    display: block;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.control-button {
+    width: 60px; /* Increased button size */
+    height: 60px; /* Increased button size */
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px; /* Increased icon size */
+}
+
+.control-button:hover {
+    background-color: #ddd;
+}
+/* Theme Switch  */
+.switch {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
